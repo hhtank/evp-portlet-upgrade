@@ -1,0 +1,13 @@
+tasks:
+  upgrade:
+    currentVersion: '6.2'
+    plugins:
+    - evp-portlet
+    pluginsSDKPath: liferay-plugins-sdk-6.2-ee-sp20/
+    upgradeVersion: '7.3'
+    upgrades:
+    #- name: configure-workspace-path
+    - name: create-workspace
+    #- name: configure-plugins
+    - name: plugins-create-modules
+    workspacePath: liferay-workspace/
