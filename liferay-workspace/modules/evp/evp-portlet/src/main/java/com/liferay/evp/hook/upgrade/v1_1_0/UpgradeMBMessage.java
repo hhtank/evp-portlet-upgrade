@@ -32,10 +32,10 @@ import com.liferay.portal.model.BaseModel;
 import com.liferay.portal.model.WorkflowInstanceLink;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.ServiceContextThreadLocal;
-import com.liferay.portlet.messageboards.model.MBDiscussion;
-import com.liferay.portlet.messageboards.model.MBMessage;
-import com.liferay.portlet.messageboards.service.MBDiscussionLocalServiceUtil;
-import com.liferay.portlet.messageboards.service.MBMessageLocalServiceUtil;
+import com.liferay.message.boards.model.MBDiscussion;
+import com.liferay.message.boards.model.MBMessage;
+import com.liferay.message.boards.service.MBDiscussionLocalServiceUtil;
+import com.liferay.message.boards.service.MBMessageLocalServiceUtil;
 
 import java.util.ArrayList;
 import java.util.List;
