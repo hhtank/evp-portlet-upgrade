@@ -10,11 +10,12 @@ tasks:
     - name: plugins-convert-build
     - name: plugins-migrate-code
     - name: remove-legacy-files
-    - name: upgrade-workspace-version
-    - name: use-target-platform
-    - name: use-release-api
-    - name: auto-correct-breaking-changes
-    - name: find-breaking-changes
-    - name: upgrade-portal-properties
-    - name: cfg-to-config-file
+    - name: update-service-builder-modules
+    #- name: upgrade-workspace-version
+    #- name: use-target-platform
+    #- name: use-release-api
+    #- name: auto-correct-breaking-changes
+    #- name: find-breaking-changes
+    #- name: upgrade-portal-properties
+    #- name: cfg-to-config-file
     workspacePath: liferay-workspace/
