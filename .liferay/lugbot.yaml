@@ -15,5 +15,5 @@ tasks:
         creates modules in the workspace using the appropriate Blade template.
     - name: plugins-convert-build
     - name: plugins-migrate-code
-    - name: remove-legacy-code
+    - name: remove-legacy-files
     workspacePath: liferay-workspace/

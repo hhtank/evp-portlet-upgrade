@@ -1,0 +1,75 @@
+10:08:58.747 WARN  L.org.apache.felix.fileinstall:205 - /opt/lugbot/deploy does not exist, please create it.
+10:08:58.751 WARN  L.org.apache.felix.fileinstall:205 - Root path does not exist: /opt/lugbot/deploy
+commiterIdentity: Lugbot <lugbot@liferay.com>
+tasks:
+  mode: pr
+  quality:
+    categories:
+    - name: BugPrevention
+    - name: Javadoc
+    - name: Miscellaneous
+    - name: NamingConventions
+    - name: Performance
+    - name: Styling
+  upgrade:
+    currentVersion: '6.2'
+    plugins:
+    - example-hook
+    - example-portlet
+    pluginsSDKPath: path/to/plugins-sdk/
+    upgradeVersion: '7.3'
+    upgrades:
+    - name: configure-workspace-path
+      description: Verifies that Lugbot config is configured with a valid Blade workspace
+        and if not suggests how to configure it in Lugbot configuration.
+    - name: create-workspace
+      description: If the workspace specified in '.tasks.upgrade.workspacePath' does
+        not exist, this creates it.
+    - name: configure-plugins
+      description: Automatically detects plugins in a Plugins SDK and adds them to
+        the Lugbot configuration under '.tasks.upgrade.plugins'.
+    - name: maven-create-modules
+      description: For the maven modules defined in '.tasks.upgrade.plugins' creates
+        modules in the workspace using the appropriate Blade template.
+    - name: plugins-create-modules
+      description: For the Plugin SDK plugins defined in '.tasks.upgrade.plugins'
+        creates modules in the workspace using the appropriate Blade template.
+    - name: maven-convert-build
+      description: Converts maven dependencies into gradle dependencies.
+    - name: plugins-convert-build
+      description: Converts Plugin SDK dependencies (Ivy) into gradle dependencies.
+    - name: maven-migrate-code
+      description: Moves code from maven modules into corresponding workspace modules.
+    - name: plugins-migrate-code
+      description: Moves code from Plugin SDK plugins into corresponding workspace
+        modules.
+    - name: remove-legacy-files
+      description: Removes known legacy files from workspace modules.
+    - name: update-service-builder-modules
+      description: Invokes the buildService task for every Service Builder module
+        found in the workspace.
+    - name: upgrade-workspace-version
+      description: Adjusts the Liferay workspace version to the latest Service Pack
+        or Fix Pack release within the product version specified.
+    - name: use-release-api
+      description: Replaces several dependencies with the uber jar API provided for
+        Liferay's APIs.
+    - name: use-target-platform
+      description: Removes a specified version from dependencies existing in the Liferay
+        target platform BOMs.
+    - name: auto-correct-breaking-changes
+      description: Automatically corrects breaking changes.
+    - name: find-breaking-changes
+      description: Finds and applies fixes for breaking changes.
+    - name: upgrade-portal-properties
+      description: Migrates or removes legacy portal properties configurations.
+      params:
+        properties:
+        - ./configs/dev/portal-ext.properties
+        - ./configs/prod/portal-ext.properties
+        - ./configs/local/portal-ext.properties
+        - ./configs/uat/portal-ext.properties
+    - name: cfg-to-config-file
+      description: Automatically converts Apache FileInstall (OSGi) '.cfg' files into
+        the more flexible '.config' syntax which has become the Liferay default.
+    workspacePath: path/to/liferay-workspace/
