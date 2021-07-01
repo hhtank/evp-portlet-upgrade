@@ -20,7 +20,6 @@ tasks:
     - name: upgrade-workspace-version
     - name: use-target-platform
     - name: use-release-api
-    - name: auto-correct-breaking-changes
     - name: find-breaking-changes
     - name: upgrade-portal-properties
     - name: cfg-to-config-file
