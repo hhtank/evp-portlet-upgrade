@@ -13,4 +13,6 @@ tasks:
     - name: plugins-create-modules
       description: For the Plugin SDK plugins defined in '.tasks.upgrade.plugins'
         creates modules in the workspace using the appropriate Blade template.
+    - name: plugins-convert-build
+    - name: plugins-migrate-code
     workspacePath: liferay-workspace/
