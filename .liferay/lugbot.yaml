@@ -1,0 +1,16 @@
+commiterIdentity: Ha Tang <ha.tang@liferay.com>
+tasks:
+  upgrade:
+    currentVersion: '6.2'
+    plugins:
+    - evp-portlet
+    pluginsSDKPath: liferay-plugins-sdk-6.2-ee-sp20/
+    upgradeVersion: '7.3'
+    upgrades:
+    - name: create-workspace
+      description: If the workspace specified in '.tasks.upgrade.workspacePath' does
+        not exist, this creates it.
+    - name: plugins-create-modules
+      description: For the Plugin SDK plugins defined in '.tasks.upgrade.plugins'
+        creates modules in the workspace using the appropriate Blade template.
+    workspacePath: liferay-workspace/
