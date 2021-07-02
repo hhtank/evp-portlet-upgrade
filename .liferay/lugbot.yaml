@@ -9,4 +9,6 @@ tasks:
     upgrades:
     - name: create-workspace
     - name: plugins-create-modules
+    - name: plugins-convert-build
+    - name: plugins-migrate-code
     workspacePath: liferay-workspace/
