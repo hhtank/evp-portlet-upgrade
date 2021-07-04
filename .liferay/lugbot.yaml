@@ -18,6 +18,6 @@ tasks:
     - name: use-release-api
     #- name: auto-correct-breaking-changes
     - name: find-breaking-changes
-    #- name: upgrade-portal-properties
+    - name: upgrade-portal-properties
     #- name: cfg-to-config-file
     workspacePath: liferay-workspace/
