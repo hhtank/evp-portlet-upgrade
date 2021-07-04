@@ -12,4 +12,5 @@ tasks:
     #- name: plugins-convert-build
     #- name: plugins-migrate-code
     - name: remove-legacy-files
+    - name: update-service-builder-modules
     workspacePath: liferay-workspace/
